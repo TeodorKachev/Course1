@@ -21,11 +21,13 @@ namespace MyConsoleApplication
             for (int m = 0; m < size; m++)
             {
                 matrix[m] = new int[size];
+                System.Console.WriteLine();
                 for (int n = 0; n < size; n++)
                 {
                     matrix[m][n] = buf++;
-                    System.Console.WriteLine(matrix[m][n]);
+                    System.Console.Write(matrix[m][n] + " ");
                 }
+                System.Console.WriteLine();
             }
 
             System.Console.WriteLine("Please enter first index of the element (max is "+ (size-1) + "): ");
@@ -39,7 +41,15 @@ namespace MyConsoleApplication
             Int32.TryParse(input1, out secondIndex);
 
             matrix[firstIndex][secondIndex]++;
-            System.Console.WriteLine(matrix[firstIndex][secondIndex]);
+            for (int m = 0; m < size; m++)
+            {
+                System.Console.WriteLine();
+                for (int n = 0; n < size; n++)
+                {
+                    System.Console.Write(matrix[m][n] + " ");
+                }
+                System.Console.WriteLine();
+            }
 
             System.Console.ReadLine();
         }
